@@ -11,10 +11,9 @@ OVERWRITE = TRUE
 if (OVERWRITE)
   unlink("registry/", recursive = TRUE)
 
-reg$default.resources = list(walltime = 7200L, memory = 2000L, ntasks = 1L)
-
 reg = makeExperimentRegistry(packages = c("mlr", "mlrMBO", "OpenML"))
 
+reg$default.resources = list(walltime = 7200L, memory = 2000L, ntasks = 1L)
 
 lrns = lapply(types, function(type) {
   lrn = makeLearner("classif.ksvm", id = type, type = type)
