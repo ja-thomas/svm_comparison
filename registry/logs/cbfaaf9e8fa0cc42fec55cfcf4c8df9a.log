@@ -1,0 +1,400 @@
+[job(chunk): 2016-09-09 20:14:22] Starting calculation of 1 jobs
+[job(chunk): 2016-09-09 20:14:22] Setting working directory to '/naslx/projects/pr74ze/ri89coc2/svm_comparison'
+[job(chunk): 2016-09-09 20:14:22] Memory measurement disabled
+[job(613): 2016-09-09 20:14:24] Starting job with job.id=613
+Helpers
+Loading required package: mlrMBO
+Loading required package: lhs
+Loading required package: smoof
+Loading required package: BBmisc
+Loading required package: checkmate
+Note: the specification for S3 class “AsIs” in package ‘jsonlite’ seems equivalent to one from package ‘DBI’: not turning on duplicate class definitions for this class.
+
+Attaching package: ‘mlrMBO’
+
+The following object is masked from ‘package:ParamHelpers’:
+
+    plotEAF
+
+Loading required package: OpenML
+*** glibc detected *** /lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R: malloc(): memory corruption: 0x00000000068729a0 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x790c8)[0x2ba58b3370c8]
+/lib64/libc.so.6(+0x7c07f)[0x2ba58b33a07f]
+/lib64/libc.so.6(__libc_malloc+0x77)[0x2ba58b33c1f7]
+/home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/kernlab/libs/kernlab.so(_ZN5Cache8get_dataEiPPfi+0x98)[0x2ba595827c18]
+/home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/kernlab/libs/kernlab.so(_ZNK11ONE_CLASS_Q5get_QEii+0x28)[0x2ba595836578]
+/home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/kernlab/libs/kernlab.so(_ZN11Solver_SPOC5SolveEiRK6KernelPdPsS3_dii+0x685)[0x2ba59582b6c5]
+/home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/kernlab/libs/kernlab.so(tron_run+0xa9a)[0x2ba5958325ba]
+/home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/kernlab/libs/kernlab.so(tron_optim+0x3a0)[0x2ba595833bd0]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x48974b]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x493782]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x6ad)[0x4ccfcd]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4cfe64]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x4a1)[0x4ccdc1]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4d0000]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x4a1)[0x4ccdc1]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x4a1)[0x4ccdc1]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4d0000]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x4a1)[0x4ccdc1]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_applyClosure+0x5f5)[0x4d1835]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x2a0)[0x4ccbc0]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4d0000]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x4a1)[0x4ccdc1]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4d0c8a]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(R_execMethod+0x246)[0x4d11e6]
+/lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/methods/libs/methods.so(+0x53bc)[0x2ba58e5313bc]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x5095ce]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x5f5)[0x4ccf15]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_applyClosure+0x5f5)[0x4d1835]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x2a0)[0x4ccbc0]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4cfe64]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x4a1)[0x4ccdc1]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4d0000]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x4a1)[0x4ccdc1]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_applyClosure+0x5f5)[0x4d1835]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x2a0)[0x4ccbc0]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4d0000]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x4a1)[0x4ccdc1]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4d0c8a]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(R_execMethod+0x246)[0x4d11e6]
+/lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/methods/libs/methods.so(+0x53bc)[0x2ba58e5313bc]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x5095ce]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x5f5)[0x4ccf15]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_applyClosure+0x5f5)[0x4d1835]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4c91df]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x1c0)[0x4ccae0]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_applyClosure+0x5f5)[0x4d1835]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x50abca]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x50b00f]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x50b2da]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4c6a80]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x1c0)[0x4ccae0]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_applyClosure+0x5f5)[0x4d1835]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x2a0)[0x4ccbc0]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x44ee60]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4c6996]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x1c0)[0x4ccae0]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_applyClosure+0x5f5)[0x4d1835]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4c91df]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x1c0)[0x4ccae0]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4cd183]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4cd718]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R[0x4c7e29]
+/lrz/sys/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R(Rf_eval+0x1c0)[0x4ccae0]
+======= Memory map: ========
+00400000-00727000 r-xp 00000000 00:22 93374594                           /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R
+00926000-00927000 r--p 00326000 00:22 93374594                           /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R
+00927000-00933000 rw-p 00327000 00:22 93374594                           /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/bin/exec/R
+00933000-0a6a4000 rw-p 00000000 00:00 0                                  [heap]
+2ba5865e5000-2ba586604000 r-xp 00000000 00:11 5967039                    /lib64/ld-2.11.3.so
+2ba586604000-2ba586606000 rw-p 00000000 00:00 0 
+2ba586804000-2ba586805000 r--p 0001f000 00:11 5967039                    /lib64/ld-2.11.3.so
+2ba586805000-2ba586807000 rw-p 00020000 00:11 5967039                    /lib64/ld-2.11.3.so
+2ba586807000-2ba586cca000 r-xp 00000000 00:22 93276273                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_gf_lp64.so
+2ba586cca000-2ba586ec9000 ---p 004c3000 00:22 93276273                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_gf_lp64.so
+2ba586ec9000-2ba586eca000 r--p 004c2000 00:22 93276273                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_gf_lp64.so
+2ba586eca000-2ba586ed6000 rw-p 004c3000 00:22 93276273                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_gf_lp64.so
+2ba586ed6000-2ba586edb000 rw-p 00000000 00:00 0 
+2ba586edb000-2ba587a09000 r-xp 00000000 00:22 93276274                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_gnu_thread.so
+2ba587a09000-2ba587c09000 ---p 00b2e000 00:22 93276274                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_gnu_thread.so
+2ba587c09000-2ba587c0a000 r--p 00b2e000 00:22 93276274                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_gnu_thread.so
+2ba587c0a000-2ba587c18000 rw-p 00b2f000 00:22 93276274                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_gnu_thread.so
+2ba587c18000-2ba5894fc000 r-xp 00000000 00:22 99694314                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_core.so
+2ba5894fc000-2ba5896fb000 ---p 018e4000 00:22 99694314                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_core.so
+2ba5896fb000-2ba589714000 r--p 018e3000 00:22 99694314                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_core.so
+2ba589714000-2ba589722000 rw-p 018fc000 00:22 99694314                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_core.so
+2ba589722000-2ba589776000 rw-p 00000000 00:00 0 
+2ba58978e000-2ba58978f000 rw-p 00000000 00:00 0 
+2ba58978f000-2ba5897a6000 r-xp 00000000 00:11 5967072                    /lib64/libpthread-2.11.3.so
+2ba5897a6000-2ba5899a6000 ---p 00017000 00:11 5967072                    /lib64/libpthread-2.11.3.so
+2ba5899a6000-2ba5899a7000 r--p 00017000 00:11 5967072                    /lib64/libpthread-2.11.3.so
+2ba5899a7000-2ba5899a8000 rw-p 00018000 00:11 5967072                    /lib64/libpthread-2.11.3.so
+2ba5899a8000-2ba5899ac000 rw-p 00000000 00:00 0 
+2ba5899ac000-2ba589aca000 r-xp 00000000 00:22 81200015                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgfortran.so.3.0.0
+2ba589aca000-2ba589cca000 ---p 0011e000 00:22 81200015                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgfortran.so.3.0.0
+2ba589cca000-2ba589ccb000 r--p 0011e000 00:22 81200015                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgfortran.so.3.0.0
+2ba589ccb000-2ba589ccd000 rw-p 0011f000 00:22 81200015                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgfortran.so.3.0.0
+2ba589ccd000-2ba589d28000 r-xp 00000000 00:11 5967054                    /lib64/libm-2.11.3.so
+2ba589d28000-2ba589f27000 ---p 0005b000 00:11 5967054                    /lib64/libm-2.11.3.so
+2ba589f27000-2ba589f28000 r--p 0005a000 00:11 5967054                    /lib64/libm-2.11.3.so
+2ba589f28000-2ba589f46000 rw-p 0005b000 00:11 5967054                    /lib64/libm-2.11.3.so
+2ba589f46000-2ba589f47000 rw-p 00000000 00:00 0 
+2ba589f47000-2ba589f80000 r-xp 00000000 00:11 5967130                    /lib64/libreadline.so.5.2
+2ba589f80000-2ba58a17f000 ---p 00039000 00:11 5967130                    /lib64/libreadline.so.5.2
+2ba58a17f000-2ba58a181000 r--p 00038000 00:11 5967130                    /lib64/libreadline.so.5.2
+2ba58a181000-2ba58a187000 rw-p 0003a000 00:11 5967130                    /lib64/libreadline.so.5.2
+2ba58a187000-2ba58a189000 rw-p 00000000 00:00 0 
+2ba58a189000-2ba58a1aa000 r-xp 00000000 00:11 5967118                    /lib64/liblzma.so.5.0.3
+2ba58a1aa000-2ba58a3aa000 ---p 00021000 00:11 5967118                    /lib64/liblzma.so.5.0.3
+2ba58a3aa000-2ba58a3ab000 r--p 00021000 00:11 5967118                    /lib64/liblzma.so.5.0.3
+2ba58a3ab000-2ba58a3ac000 rw-p 00022000 00:11 5967118                    /lib64/liblzma.so.5.0.3
+2ba58a3ac000-2ba58a3c1000 r-xp 00000000 00:11 5967087                    /lib64/libz.so.1.2.7
+2ba58a3c1000-2ba58a5c0000 ---p 00015000 00:11 5967087                    /lib64/libz.so.1.2.7
+2ba58a5c0000-2ba58a5c1000 r--p 00014000 00:11 5967087                    /lib64/libz.so.1.2.7
+2ba58a5c1000-2ba58a5c2000 rw-p 00015000 00:11 5967087                    /lib64/libz.so.1.2.7
+2ba58a5c2000-2ba58a5c3000 rw-p 00000000 00:00 0 
+2ba58a5c3000-2ba58a5cb000 r-xp 00000000 00:11 5967076                    /lib64/librt-2.11.3.so
+2ba58a5cb000-2ba58a7ca000 ---p 00008000 00:11 5967076                    /lib64/librt-2.11.3.so
+2ba58a7ca000-2ba58a7cb000 r--p 00007000 00:11 5967076                    /lib64/librt-2.11.3.so
+2ba58a7cb000-2ba58a7cc000 rw-p 00008000 00:11 5967076                    /lib64/librt-2.11.3.so
+2ba58a7cc000-2ba58a7ce000 r-xp 00000000 00:11 5967052                    /lib64/libdl-2.11.3.so
+2ba58a7ce000-2ba58a9ce000 ---p 00002000 00:11 5967052                    /lib64/libdl-2.11.3.so
+2ba58a9ce000-2ba58a9cf000 r--p 00002000 00:11 5967052                    /lib64/libdl-2.11.3.so
+2ba58a9cf000-2ba58a9d0000 rw-p 00003000 00:11 5967052                    /lib64/libdl-2.11.3.so
+2ba58a9d0000-2ba58ab09000 r-xp 00000000 00:11 12403364                   /usr/lib64/libicuuc.so.40.0
+2ba58ab09000-2ba58ad08000 ---p 00139000 00:11 12403364                   /usr/lib64/libicuuc.so.40.0
+2ba58ad08000-2ba58ad16000 r--p 00138000 00:11 12403364                   /usr/lib64/libicuuc.so.40.0
+2ba58ad16000-2ba58ad18000 rw-p 00146000 00:11 12403364                   /usr/lib64/libicuuc.so.40.0
+2ba58ad18000-2ba58ad1b000 rw-p 00000000 00:00 0 
+2ba58ad1b000-2ba58ae99000 r-xp 00000000 00:11 12403354                   /usr/lib64/libicui18n.so.40.0
+2ba58ae99000-2ba58b099000 ---p 0017e000 00:11 12403354                   /usr/lib64/libicui18n.so.40.0
+2ba58b099000-2ba58b0a3000 r--p 0017e000 00:11 12403354                   /usr/lib64/libicui18n.so.40.0
+2ba58b0a3000-2ba58b0a6000 rw-p 00188000 00:11 12403354                   /usr/lib64/libicui18n.so.40.0
+2ba58b0a6000-2ba58b0a7000 rw-p 00000000 00:00 0 
+2ba58b0a7000-2ba58b0bd000 r-xp 00000000 00:22 97026298                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgomp.so.1.0.0
+2ba58b0bd000-2ba58b2bc000 ---p 00016000 00:22 97026298                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgomp.so.1.0.0
+2ba58b2bc000-2ba58b2bd000 r--p 00015000 00:22 97026298                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgomp.so.1.0.0
+2ba58b2bd000-2ba58b2be000 rw-p 00016000 00:22 97026298                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgomp.so.1.0.0
+2ba58b2be000-2ba58b430000 r-xp 00000000 00:11 5967046                    /lib64/libc-2.11.3.so
+2ba58b430000-2ba58b630000 ---p 00172000 00:11 5967046                    /lib64/libc-2.11.3.so
+2ba58b630000-2ba58b634000 r--p 00172000 00:11 5967046                    /lib64/libc-2.11.3.so
+2ba58b634000-2ba58b635000 rw-p 00176000 00:11 5967046                    /lib64/libc-2.11.3.so
+2ba58b635000-2ba58b63b000 rw-p 00000000 00:00 0 
+2ba58b63b000-2ba58b678000 r-xp 00000000 00:22 81200009                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libquadmath.so.0.0.0
+2ba58b678000-2ba58b877000 ---p 0003d000 00:22 81200009                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libquadmath.so.0.0.0
+2ba58b877000-2ba58b878000 r--p 0003c000 00:22 81200009                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libquadmath.so.0.0.0
+2ba58b878000-2ba58b879000 rw-p 0003d000 00:22 81200009                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libquadmath.so.0.0.0
+2ba58b879000-2ba58b88f000 r-xp 00000000 00:22 76501000                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgcc_s.so.1
+2ba58b88f000-2ba58ba8e000 ---p 00016000 00:22 76501000                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgcc_s.so.1
+2ba58ba8e000-2ba58ba8f000 r--p 00015000 00:22 76501000                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgcc_s.so.1
+2ba58ba8f000-2ba58ba90000 rw-p 00016000 00:22 76501000                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libgcc_s.so.1
+2ba58ba90000-2ba58bace000 r-xp 00000000 00:11 5967114                    /lib64/libncurses.so.5.6
+2ba58bace000-2ba58bcce000 ---p 0003e000 00:11 5967114                    /lib64/libncurses.so.5.6
+2ba58bcce000-2ba58bcd2000 r--p 0003e000 00:11 5967114                    /lib64/libncurses.so.5.6
+2ba58bcd2000-2ba58bcd8000 rw-p 00042000 00:11 5967114                    /lib64/libncurses.so.5.6
+2ba58bcd8000-2ba58bcd9000 rw-p 00000000 00:00 0 
+2ba58bcd9000-2ba58ca1d000 r--p 00000000 00:11 12403352                   /usr/lib64/libicudata.so.40.0
+2ba58ca1d000-2ba58cc1c000 ---p 00d44000 00:11 12403352                   /usr/lib64/libicudata.so.40.0
+2ba58cc1c000-2ba58cc1d000 r--p 00d43000 00:11 12403352                   /usr/lib64/libicudata.so.40.0
+2ba58cc1d000-2ba58cd0e000 r-xp 00000000 00:22 76501003                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libstdc++.so.6.0.20
+2ba58cd0e000-2ba58cf0d000 ---p 000f1000 00:22 76501003                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libstdc++.so.6.0.20
+2ba58cf0d000-2ba58cf16000 r--p 000f0000 00:22 76501003                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libstdc++.so.6.0.20
+2ba58cf16000-2ba58cf18000 rw-p 000f9000 00:22 76501003                   /lrz/mnt/sys.x86_64/compilers/gcc/4.9.3/lib64/libstdc++.so.6.0.20
+2ba58cf18000-2ba58cf32000 rw-p 00000000 00:00 0 
+2ba58cf32000-2ba58cf33000 r--p 00000000 00:11 7333077                    /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+2ba58cf33000-2ba58cf3a000 r--s 00000000 00:11 6344157                    /usr/lib64/gconv/gconv-modules.cache
+2ba58cf3a000-2ba58cf3b000 rw-p 00000000 00:00 0 
+2ba58cf3b000-2ba58cf7a000 r--p 00000000 00:11 7333197                    /usr/lib/locale/en_US.utf8/LC_CTYPE
+2ba58cf7a000-2ba58d097000 r--p 00000000 00:11 7333198                    /usr/lib/locale/en_US.utf8/LC_COLLATE
+2ba58d097000-2ba58d098000 r--p 00000000 00:11 7324551                    /usr/lib/locale/de_DE.utf8/LC_TIME
+2ba58d098000-2ba58d099000 r--p 00000000 00:11 7333170                    /usr/lib/locale/de_DE.utf8/LC_MONETARY
+2ba58d099000-2ba58d09a000 r--p 00000000 00:11 7333193                    /usr/lib/locale/de_DE.utf8/LC_PAPER
+2ba58d09a000-2ba58d09b000 r--p 00000000 00:11 7333196                    /usr/lib/locale/de_DE.utf8/LC_MEASUREMENT
+2ba58d09b000-2ba58d307000 rw-p 00000000 00:00 0 
+2ba58d327000-2ba58d487000 rw-p 00000000 00:00 0 
+2ba58d487000-2ba58d492000 r-xp 00000000 00:22 73065031                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/utils/libs/utils.so
+2ba58d492000-2ba58d692000 ---p 0000b000 00:22 73065031                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/utils/libs/utils.so
+2ba58d692000-2ba58d693000 r--p 0000b000 00:22 73065031                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/utils/libs/utils.so
+2ba58d693000-2ba58d694000 rw-p 0000c000 00:22 73065031                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/utils/libs/utils.so
+2ba58d694000-2ba58d695000 rw-p 00000000 00:00 0 
+2ba58d6a5000-2ba58d6cc000 rw-p 00000000 00:00 0 
+2ba58d6cc000-2ba58d705000 r-xp 00000000 00:22 73289426                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/grDevices/libs/grDevices.so
+2ba58d705000-2ba58d905000 ---p 00039000 00:22 73289426                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/grDevices/libs/grDevices.so
+2ba58d905000-2ba58d90a000 r--p 00039000 00:22 73289426                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/grDevices/libs/grDevices.so
+2ba58d90a000-2ba58d90c000 rw-p 0003e000 00:22 73289426                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/grDevices/libs/grDevices.so
+2ba58d90c000-2ba58d90d000 rw-p 00000000 00:00 0 
+2ba58d91d000-2ba58d95b000 rw-p 00000000 00:00 0 
+2ba58d95b000-2ba58d99f000 r-xp 00000000 00:22 96922209                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/graphics/libs/graphics.so
+2ba58d99f000-2ba58db9f000 ---p 00044000 00:22 96922209                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/graphics/libs/graphics.so
+2ba58db9f000-2ba58dba0000 r--p 00044000 00:22 96922209                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/graphics/libs/graphics.so
+2ba58dba0000-2ba58dba1000 rw-p 00045000 00:22 96922209                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/graphics/libs/graphics.so
+2ba58dbb1000-2ba58dce3000 rw-p 00000000 00:00 0 
+2ba58dce3000-2ba58dda7000 r-xp 00000000 00:22 86414044                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/stats/libs/stats.so
+2ba58dda7000-2ba58dfa7000 ---p 000c4000 00:22 86414044                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/stats/libs/stats.so
+2ba58dfa7000-2ba58dfa9000 r--p 000c4000 00:22 86414044                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/stats/libs/stats.so
+2ba58dfa9000-2ba58dfab000 rw-p 000c6000 00:22 86414044                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/stats/libs/stats.so
+2ba58dfbb000-2ba58e106000 rw-p 00000000 00:00 0 
+2ba58e106000-2ba58e11c000 r-xp 00000000 00:22 76258890                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/tools/libs/tools.so
+2ba58e11c000-2ba58e31b000 ---p 00016000 00:22 76258890                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/tools/libs/tools.so
+2ba58e31b000-2ba58e31c000 r--p 00015000 00:22 76258890                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/tools/libs/tools.so
+2ba58e31c000-2ba58e31d000 rw-p 00016000 00:22 76258890                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/tools/libs/tools.so
+2ba58e31d000-2ba58e32b000 r-xp 00000000 00:4f 302264222                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/checkmate/libs/checkmate.so
+2ba58e32b000-2ba58e52a000 ---p 0000e000 00:4f 302264222                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/checkmate/libs/checkmate.so
+2ba58e52a000-2ba58e52b000 r--p 0000d000 00:4f 302264222                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/checkmate/libs/checkmate.so
+2ba58e52b000-2ba58e52c000 rw-p 0000e000 00:4f 302264222                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/checkmate/libs/checkmate.so
+2ba58e52c000-2ba58e534000 r-xp 00000000 00:22 78836464                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/methods/libs/methods.so
+2ba58e534000-2ba58e733000 ---p 00008000 00:22 78836464                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/methods/libs/methods.so
+2ba58e733000-2ba58e734000 r--p 00007000 00:22 78836464                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/methods/libs/methods.so
+2ba58e734000-2ba58e735000 rw-p 00008000 00:22 78836464                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/methods/libs/methods.so
+2ba58e745000-2ba58e83a000 rw-p 00000000 00:00 0 
+2ba58eab2000-2ba58eab4000 r-xp 00000000 00:4f 302259116                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/chron/libs/chron.so
+2ba58eab4000-2ba58ecb3000 ---p 00002000 00:4f 302259116                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/chron/libs/chron.so
+2ba58ecb3000-2ba58ecb4000 r--p 00001000 00:4f 302259116                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/chron/libs/chron.so
+2ba58ecb4000-2ba58ecb5000 rw-p 00002000 00:4f 302259116                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/chron/libs/chron.so
+2ba58ecb5000-2ba58ecec000 r-xp 00000000 00:4f 302267515                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/data.table/libs/datatable.so
+2ba58ecec000-2ba58eeeb000 ---p 00037000 00:4f 302267515                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/data.table/libs/datatable.so
+2ba58eeeb000-2ba58eeec000 r--p 00036000 00:4f 302267515                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/data.table/libs/datatable.so
+2ba58eeec000-2ba58eeed000 rw-p 00037000 00:4f 302267515                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/data.table/libs/datatable.so
+2ba58eeed000-2ba58ef51000 rw-p 00000000 00:00 0 
+2ba58ef51000-2ba58f407000 r-xp 00000000 00:4f 302268546                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/stringi/libs/stringi.so
+2ba58f407000-2ba58f606000 ---p 004b6000 00:4f 302268546                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/stringi/libs/stringi.so
+2ba58f606000-2ba58f628000 r--p 004b5000 00:4f 302268546                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/stringi/libs/stringi.so
+2ba58f628000-2ba58f632000 rw-p 004d7000 00:4f 302268546                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/stringi/libs/stringi.so
+2ba58f632000-2ba58f636000 rw-p 00000000 00:00 0 
+2ba58f636000-2ba590eec000 r--s 00000000 00:4f 302268547                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/stringi/libs/icudt55l.dat
+2ba590eec000-2ba590eed000 r-xp 00000000 00:4f 302317369                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/batchtools/libs/batchtools.so
+2ba590eed000-2ba5910ed000 ---p 00001000 00:4f 302317369                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/batchtools/libs/batchtools.so
+2ba5910ed000-2ba5910ee000 r--p 00001000 00:4f 302317369                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/batchtools/libs/batchtools.so
+2ba5910ee000-2ba5910ef000 rw-p 00002000 00:4f 302317369                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/batchtools/libs/batchtools.so
+2ba5910ef000-2ba5910ff000 rw-p 00000000 00:00 0 
+2ba5910ff000-2ba591101000 r-xp 00000000 00:4f 302287320                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/BBmisc/libs/BBmisc.so
+2ba591101000-2ba591301000 ---p 00002000 00:4f 302287320                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/BBmisc/libs/BBmisc.so
+2ba591301000-2ba591302000 r--p 00002000 00:4f 302287320                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/BBmisc/libs/BBmisc.so
+2ba591302000-2ba591303000 rw-p 00003000 00:4f 302287320                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/BBmisc/libs/BBmisc.so
+2ba591303000-2ba591306000 r-xp 00000000 00:4f 302281152                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/ParamHelpers/libs/ParamHelpers.so
+2ba591306000-2ba591505000 ---p 00003000 00:4f 302281152                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/ParamHelpers/libs/ParamHelpers.so
+2ba591505000-2ba591506000 r--p 00002000 00:4f 302281152                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/ParamHelpers/libs/ParamHelpers.so
+2ba591506000-2ba591507000 rw-p 00003000 00:4f 302281152                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/ParamHelpers/libs/ParamHelpers.so
+2ba591507000-2ba591526000 r-xp 00000000 00:22 83912947                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/grid/libs/grid.so
+2ba591526000-2ba591726000 ---p 0001f000 00:22 83912947                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/grid/libs/grid.so
+2ba591726000-2ba591727000 r--p 0001f000 00:22 83912947                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/grid/libs/grid.so
+2ba591727000-2ba591728000 rw-p 00020000 00:22 83912947                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/grid/libs/grid.so
+2ba591728000-2ba591783000 r-xp 00000000 00:4f 302362037                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/Rcpp/libs/Rcpp.so
+2ba591783000-2ba591982000 ---p 0005b000 00:4f 302362037                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/Rcpp/libs/Rcpp.so
+2ba591982000-2ba591984000 r--p 0005a000 00:4f 302362037                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/Rcpp/libs/Rcpp.so
+2ba591984000-2ba591985000 rw-p 0005c000 00:4f 302362037                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/Rcpp/libs/Rcpp.so
+2ba591985000-2ba59198d000 rw-p 00000000 00:00 0 
+2ba59198d000-2ba59199d000 r-xp 00000000 00:4f 302255506                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/colorspace/libs/colorspace.so
+2ba59199d000-2ba591b9c000 ---p 00010000 00:4f 302255506                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/colorspace/libs/colorspace.so
+2ba591b9c000-2ba591b9d000 r--p 0000f000 00:4f 302255506                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/colorspace/libs/colorspace.so
+2ba591b9d000-2ba591b9e000 rw-p 00010000 00:4f 302255506                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/colorspace/libs/colorspace.so
+2ba591b9e000-2ba591ba7000 r-xp 00000000 00:4f 302269158                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/plyr/libs/plyr.so
+2ba591ba7000-2ba591da6000 ---p 00009000 00:4f 302269158                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/plyr/libs/plyr.so
+2ba591da6000-2ba591da7000 r--p 00008000 00:4f 302269158                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/plyr/libs/plyr.so
+2ba591da7000-2ba591da8000 rw-p 00009000 00:4f 302269158                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/plyr/libs/plyr.so
+2ba591da8000-2ba591db2000 r-xp 00000000 00:4f 302255170                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/scales/libs/scales.so
+2ba591db2000-2ba591fb2000 ---p 0000a000 00:4f 302255170                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/scales/libs/scales.so
+2ba591fb2000-2ba591fb3000 r--p 0000a000 00:4f 302255170                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/scales/libs/scales.so
+2ba591fb3000-2ba591fb4000 rw-p 0000b000 00:4f 302255170                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/scales/libs/scales.so
+2ba591fb4000-2ba591fb9000 r-xp 00000000 00:22 72753479                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/parallel/libs/parallel.so
+2ba591fb9000-2ba5921b8000 ---p 00005000 00:22 72753479                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/parallel/libs/parallel.so
+2ba5921b8000-2ba5921b9000 r--p 00004000 00:22 72753479                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/parallel/libs/parallel.so
+2ba5921b9000-2ba5921ba000 rw-p 00005000 00:22 72753479                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/parallel/libs/parallel.so
+2ba5921ba000-2ba5921d0000 r-xp 00000000 00:4f 302325913                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/tibble/libs/tibble.so
+2ba5921d0000-2ba5923d0000 ---p 00016000 00:4f 302325913                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/tibble/libs/tibble.so
+2ba5923d0000-2ba5923d1000 r--p 00016000 00:4f 302325913                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/tibble/libs/tibble.so
+2ba5923d1000-2ba5923d2000 rw-p 00017000 00:4f 302325913                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/tibble/libs/tibble.so
+2ba5923d2000-2ba592580000 r-xp 00000000 00:4f 302268526                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/dplyr/libs/dplyr.so
+2ba592580000-2ba59277f000 ---p 001ae000 00:4f 302268526                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/dplyr/libs/dplyr.so
+2ba59277f000-2ba59278a000 r--p 001ad000 00:4f 302268526                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/dplyr/libs/dplyr.so
+2ba59278a000-2ba59278c000 rw-p 001b8000 00:4f 302268526                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/dplyr/libs/dplyr.so
+2ba59278c000-2ba59278f000 rw-p 00000000 00:00 0 
+2ba59278f000-2ba5927ac000 r-xp 00000000 00:4f 302413996                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/digest/libs/digest.so
+2ba5927ac000-2ba5929ab000 ---p 0001d000 00:4f 302413996                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/digest/libs/digest.so
+2ba5929ab000-2ba5929ac000 r--p 0001c000 00:4f 302413996                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/digest/libs/digest.so
+2ba5929ac000-2ba5929ad000 rw-p 0001d000 00:4f 302413996                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/digest/libs/digest.so
+2ba5929ad000-2ba5929af000 rw-p 00000000 00:00 0 
+2ba5929af000-2ba5929b7000 r-xp 00000000 00:4f 302286543                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/htmltools/libs/htmltools.so
+2ba5929b7000-2ba592bb7000 ---p 00008000 00:4f 302286543                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/htmltools/libs/htmltools.so
+2ba592bb7000-2ba592bb8000 r--p 00008000 00:4f 302286543                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/htmltools/libs/htmltools.so
+2ba592bb8000-2ba592bb9000 rw-p 00009000 00:4f 302286543                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/htmltools/libs/htmltools.so
+2ba592bb9000-2ba592c17000 r-xp 00000000 00:4f 302270140                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/httpuv/libs/httpuv.so
+2ba592c17000-2ba592e16000 ---p 0005e000 00:4f 302270140                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/httpuv/libs/httpuv.so
+2ba592e16000-2ba592e18000 r--p 0005d000 00:4f 302270140                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/httpuv/libs/httpuv.so
+2ba592e18000-2ba592e1a000 rw-p 0005f000 00:4f 302270140                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/httpuv/libs/httpuv.so
+2ba592e1a000-2ba592e1b000 rw-p 00000000 00:00 0 
+2ba592e1b000-2ba592e1c000 r-xp 00000000 00:4f 302306983                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mime/libs/mime.so
+2ba592e1c000-2ba59301b000 ---p 00001000 00:4f 302306983                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mime/libs/mime.so
+2ba59301b000-2ba59301c000 r--p 00000000 00:4f 302306983                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mime/libs/mime.so
+2ba59301c000-2ba59301d000 rw-p 00001000 00:4f 302306983                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mime/libs/mime.so
+2ba59301d000-2ba59301f000 r-xp 00000000 00:22 82186284                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/splines/libs/splines.so
+2ba59301f000-2ba59321e000 ---p 00002000 00:22 82186284                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/splines/libs/splines.so
+2ba59321e000-2ba59321f000 r--p 00001000 00:22 82186284                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/splines/libs/splines.so
+2ba59321f000-2ba593220000 rw-p 00002000 00:22 82186284                   /lrz/mnt/sys.x86_64/applications/R/3.2_shared_MKL/lib64/R/library/splines/libs/splines.so
+2ba593220000-2ba593223000 r-xp 00000000 00:4f 302266277                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/lattice/libs/lattice.so
+2ba593223000-2ba593422000 ---p 00003000 00:4f 302266277                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/lattice/libs/lattice.so
+2ba593422000-2ba593423000 r--p 00002000 00:4f 302266277                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/lattice/libs/lattice.so
+2ba593423000-2ba593424000 rw-p 00003000 00:4f 302266277                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/lattice/libs/lattice.so
+2ba593434000-2ba593633000 rw-p 00000000 00:00 0 
+2ba593633000-2ba593718000 r-xp 00000000 00:4f 302267831                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/Matrix/libs/Matrix.so
+2ba593718000-2ba593917000 ---p 000e5000 00:4f 302267831                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/Matrix/libs/Matrix.so
+2ba593917000-2ba593918000 r--p 000e4000 00:4f 302267831                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/Matrix/libs/Matrix.so
+2ba593918000-2ba59391b000 rw-p 000e5000 00:4f 302267831                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/Matrix/libs/Matrix.so
+2ba59391b000-2ba59391d000 rw-p 00000000 00:00 0 
+2ba59391d000-2ba593947000 r-xp 00000000 00:4f 302266193                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/survival/libs/survival.so
+2ba593947000-2ba593b47000 ---p 0002a000 00:4f 302266193                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/survival/libs/survival.so
+2ba593b47000-2ba593b48000 r--p 0002a000 00:4f 302266193                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/survival/libs/survival.so
+2ba593b48000-2ba593b49000 rw-p 0002b000 00:4f 302266193                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/survival/libs/survival.so
+2ba593b49000-2ba593b4a000 r-xp 00000000 00:4f 302404604                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mlr/libs/mlr.so
+2ba593b4a000-2ba593d49000 ---p 00001000 00:4f 302404604                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mlr/libs/mlr.so
+2ba593d49000-2ba593d4a000 r--p 00000000 00:4f 302404604                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mlr/libs/mlr.so
+2ba593d4a000-2ba593d4b000 rw-p 00001000 00:4f 302404604                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mlr/libs/mlr.so
+2ba593d4b000-2ba593d53000 r-xp 00000000 00:4f 302281839                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/lhs/libs/lhs.so
+2ba593d53000-2ba593f52000 ---p 00008000 00:4f 302281839                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/lhs/libs/lhs.so
+2ba593f52000-2ba593f53000 r--p 00007000 00:4f 302281839                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/lhs/libs/lhs.so
+2ba593f53000-2ba593f54000 rw-p 00008000 00:4f 302281839                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/lhs/libs/lhs.so
+2ba593f54000-2ba593f5d000 r-xp 00000000 00:4f 302258615                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mco/libs/mco.so
+2ba593f5d000-2ba59415c000 ---p 00009000 00:4f 302258615                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mco/libs/mco.so
+2ba59415c000-2ba59415d000 r--p 00008000 00:4f 302258615                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mco/libs/mco.so
+2ba59415d000-2ba59415e000 rw-p 00009000 00:4f 302258615                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mco/libs/mco.so
+2ba59415e000-2ba594161000 r-xp 00000000 00:4f 302275539                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/base64enc/libs/base64enc.so
+2ba594161000-2ba594360000 ---p 00003000 00:4f 302275539                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/base64enc/libs/base64enc.so
+2ba594360000-2ba594361000 r--p 00002000 00:4f 302275539                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/base64enc/libs/base64enc.so
+2ba594361000-2ba594362000 rw-p 00003000 00:4f 302275539                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/base64enc/libs/base64enc.so
+2ba594362000-2ba594364000 rw-p 00000000 00:00 0 
+2ba594364000-2ba594374000 r-xp 00000000 00:4f 302318779                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/jsonlite/libs/jsonlite.so
+2ba594374000-2ba594573000 ---p 00010000 00:4f 302318779                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/jsonlite/libs/jsonlite.so
+2ba594573000-2ba594574000 r--p 0000f000 00:4f 302318779                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/jsonlite/libs/jsonlite.so
+2ba594574000-2ba594575000 rw-p 00010000 00:4f 302318779                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/jsonlite/libs/jsonlite.so
+2ba594575000-2ba59458e000 r-xp 00000000 00:4f 302290364                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/tidyr/libs/tidyr.so
+2ba59458e000-2ba59478e000 ---p 00019000 00:4f 302290364                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/tidyr/libs/tidyr.so
+2ba59478e000-2ba59478f000 r--p 00019000 00:4f 302290364                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/tidyr/libs/tidyr.so
+2ba59478f000-2ba594790000 rw-p 0001a000 00:4f 302290364                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/tidyr/libs/tidyr.so
+2ba594790000-2ba5947ae000 r-xp 00000000 00:4f 302259549                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/smoof/libs/smoof.so
+2ba5947ae000-2ba5949ad000 ---p 0001e000 00:4f 302259549                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/smoof/libs/smoof.so
+2ba5949ad000-2ba5949ae000 r--p 0001d000 00:4f 302259549                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/smoof/libs/smoof.so
+2ba5949ae000-2ba5949af000 rw-p 0001e000 00:4f 302259549                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/smoof/libs/smoof.so
+2ba5949af000-2ba5949b0000 rw-p 00000000 00:00 0 
+2ba5949b0000-2ba5949b4000 r-xp 00000000 00:4f 302269494                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mlrMBO/libs/mlrMBO.so
+2ba5949b4000-2ba594bb3000 ---p 00004000 00:4f 302269494                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mlrMBO/libs/mlrMBO.so
+2ba594bb3000-2ba594bb4000 r--p 00003000 00:4f 302269494                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mlrMBO/libs/mlrMBO.so
+2ba594bb4000-2ba594bb5000 rw-p 00004000 00:4f 302269494                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/mlrMBO/libs/mlrMBO.so
+2ba594bb5000-2ba594bd3000 r-xp 00000000 00:4f 302261406                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/XML/libs/XML.so
+2ba594bd3000-2ba594dd3000 ---p 0001e000 00:4f 302261406                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/XML/libs/XML.so
+2ba594dd3000-2ba594dd4000 r--p 0001e000 00:4f 302261406                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/XML/libs/XML.so
+2ba594dd4000-2ba594dd6000 rw-p 0001f000 00:4f 302261406                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/XML/libs/XML.so
+2ba594dd6000-2ba594f28000 r-xp 00000000 00:11 5975966                    /usr/lib64/libxml2.so.2.7.6
+2ba594f28000-2ba595128000 ---p 00152000 00:11 5975966                    /usr/lib64/libxml2.so.2.7.6
+2ba595128000-2ba595130000 r--p 00152000 00:11 5975966                    /usr/lib64/libxml2.so.2.7.6
+2ba595130000-2ba595132000 rw-p 0015a000 00:11 5975966                    /usr/lib64/libxml2.so.2.7.6
+2ba595132000-2ba595133000 rw-p 00000000 00:00 0 
+2ba595133000-2ba59516e000 r-xp 00000000 00:4f 302291662                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/xml2/libs/xml2.so
+2ba59516e000-2ba59536e000 ---p 0003b000 00:4f 302291662                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/xml2/libs/xml2.so
+2ba59536e000-2ba59536f000 r--p 0003b000 00:4f 302291662                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/xml2/libs/xml2.so
+2ba59536f000-2ba595370000 rw-p 0003c000 00:4f 302291662                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/xml2/libs/xml2.so
+2ba595370000-2ba595372000 rw-p 00000000 00:00 0 
+2ba595372000-2ba5953ff000 r-xp 00000000 00:4f 302389274                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/readr/libs/readr.so
+2ba5953ff000-2ba5955ff000 ---p 0008d000 00:4f 302389274                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/readr/libs/readr.so
+2ba5955ff000-2ba595601000 r--p 0008d000 00:4f 302389274                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/readr/libs/readr.so
+2ba595601000-2ba595602000 rw-p 0008f000 00:4f 302389274                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/readr/libs/readr.so
+2ba595602000-2ba595609000 rw-p 00000000 00:00 0 
+2ba595609000-2ba59560b000 r-xp 00000000 00:4f 302354353                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/farff/libs/farff.so
+2ba59560b000-2ba59580a000 ---p 00002000 00:4f 302354353                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/farff/libs/farff.so
+2ba59580a000-2ba59580b000 r--p 00001000 00:4f 302354353                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/farff/libs/farff.so
+2ba59580b000-2ba59580c000 rw-p 00002000 00:4f 302354353                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/farff/libs/farff.so
+2ba59580c000-2ba59583c000 r-xp 00000000 00:4f 302358996                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/kernlab/libs/kernlab.so
+2ba59583c000-2ba595a3c000 ---p 00030000 00:4f 302358996                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/kernlab/libs/kernlab.so
+2ba595a3c000-2ba595a3d000 r--p 00030000 00:4f 302358996                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/kernlab/libs/kernlab.so
+2ba595a3d000-2ba595a3e000 rw-p 00031000 00:4f 302358996                  /home/hpc/pr74ze/ri89coc2/R/x86_64-unknown-linux-gnu-library/3.2/kernlab/libs/kernlab.so
+2ba595a3e000-2ba59748f000 r-xp 00000000 00:22 99694311                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_avx2.so
+2ba59748f000-2ba59768e000 ---p 01a51000 00:22 99694311                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_avx2.so
+2ba59768e000-2ba597693000 r--p 01a50000 00:22 99694311                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_avx2.so
+2ba597693000-2ba597699000 rw-p 01a55000 00:22 99694311                   /lrz/mnt/sys.x86_64/intel/compiler/composer_xe_2015.2.164/mkl/lib/intel64/libmkl_avx2.so
+2ba597699000-2ba598741000 rw-p 00000000 00:00 0 
+2ba59c000000-2ba59c021000 rw-p 00000000 00:00 0 
+2ba59c021000-2ba5a0000000 ---p 00000000 00:00 0 
+7ffe8d266000-7ffe8d2e2000 rw-p 00000000 00:00 0                          [stack]
+7ffe8d3de000-7ffe8d3df000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+/var/slurmd-serial/job822786/slurm_script: line 12: 22643 Aborted                 (core dumped) Rscript -e 'batchtools::doJobCollection("/naslx/projects/pr74ze/ri89coc2/svm_comparison/registry/jobs/cbfaaf9e8fa0cc42fec55cfcf4c8df9a.rds", "/naslx/projects/pr74ze/ri89coc2/svm_comparison/registry/logs/cbfaaf9e8fa0cc42fec55cfcf4c8df9a.log")'

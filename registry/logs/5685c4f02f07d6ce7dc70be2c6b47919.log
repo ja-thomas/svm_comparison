@@ -1,0 +1,935 @@
+[job(chunk): 2016-09-09 20:15:45] Starting calculation of 1 jobs
+[job(chunk): 2016-09-09 20:15:45] Setting working directory to '/naslx/projects/pr74ze/ri89coc2/svm_comparison'
+[job(chunk): 2016-09-09 20:15:45] Memory measurement disabled
+[job(743): 2016-09-09 20:15:47] Starting job with job.id=743
+[job(743): 2016-09-09 20:16:47] Generating problem instance for problem '458' ...
+[job(743): 2016-09-09 20:16:47] Downloading from 'http://www.openml.org/api/v1/data/458' to '/tmp/ri89coc2/Rtmp2xEJNT/cache/datasets/458/description.xml'.
+[job(743): 2016-09-09 20:16:47] Downloading from 'http://www.openml.org/data/download/52570/analcatdata_authorship.arff' to '/tmp/ri89coc2/Rtmp2xEJNT/cache/datasets/458/dataset.arff'
+[job(743): 2016-09-09 20:16:47] Loading required package: readr
+[job(743): 2016-09-09 20:16:47] Applying algorithm 'kbb-svc.tuned' on problem '458' ...
+[job(743): 2016-09-09 20:16:47] Data '458' file 'description.xml' found in cache.
+[job(743): 2016-09-09 20:16:47] Data '458' file 'dataset.arff' found in cache.
+[job(743): 2016-09-09 20:16:47] [Tune] Started tuning learner kbb-svc for parameter set:
+[job(743): 2016-09-09 20:16:47]          Type len Def    Constr Req Tunable Trafo
+[job(743): 2016-09-09 20:16:47] C     numeric   -   - -12 to 12   -    TRUE     Y
+[job(743): 2016-09-09 20:16:47] sigma numeric   -   - -12 to 12   -    TRUE     Y
+[job(743): 2016-09-09 20:16:47] With control class: TuneControlMBO
+[job(743): 2016-09-09 20:16:47] Imputation value: -0
+[job(743): 2016-09-09 20:16:47] [Tune-x] 1: C=0.000313; sigma=0.194
+[job(743): 2016-09-09 20:16:47] [Tune-y] 1: acc.test.mean=0.316; time: 0.0 min; memory: 114Mb use, 147Mb max
+[job(743): 2016-09-09 20:16:47] [Tune-x] 2: C=26; sigma=1.12
+[job(743): 2016-09-09 20:16:47] [Tune-y] 2: acc.test.mean=0.354; time: 0.0 min; memory: 114Mb use, 147Mb max
+[job(743): 2016-09-09 20:16:47] [Tune-x] 3: C=0.0348; sigma=0.000681
+[job(743): 2016-09-09 20:16:47] [Tune-y] 3: acc.test.mean=0.686; time: 0.0 min; memory: 114Mb use, 147Mb max
+[job(743): 2016-09-09 20:16:47] [Tune-x] 4: C=1.05; sigma=771
+[job(743): 2016-09-09 20:16:47] [Tune-y] 4: acc.test.mean=0.354; time: 0.0 min; memory: 114Mb use, 147Mb max
+[job(743): 2016-09-09 20:16:47] [Tune-x] 5: C=548; sigma=239
+[job(743): 2016-09-09 20:16:47] [Tune-y] 5: acc.test.mean=0.354; time: 0.0 min; memory: 114Mb use, 147Mb max
+[job(743): 2016-09-09 20:16:47] [Tune-x] 6: C=0.465; sigma=0.00261
+[job(743): 2016-09-09 20:16:47] [Tune-y] 6: acc.test.mean=0.999; time: 0.0 min; memory: 114Mb use, 154Mb max
+[job(743): 2016-09-09 20:16:47] [Tune-x] 7: C=0.00323; sigma=22.9
+[job(743): 2016-09-09 20:16:47] [Tune-y] 7: acc.test.mean=0.354; time: 0.0 min; memory: 114Mb use, 154Mb max
+[job(743): 2016-09-09 20:16:47] [Tune-x] 8: C=163; sigma=0.0547
+[job(743): 2016-09-09 20:16:47] [Tune-y] 8: acc.test.mean=0.967; time: 0.0 min; memory: 114Mb use, 154Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  41.47829 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  -0.6823839 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      0.68238  |proj g|=      0.26946
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      0.60569  |proj g|=       0.25102
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      0.26417  |proj g|=      0.056337
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      0.23039  |proj g|=      0.063706
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      0.20351  |proj g|=      0.052648
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      0.10204  |proj g|=      0.028961
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =     0.090694  |proj g|=     0.0044626
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =     0.088459  |proj g|=    0.00094513
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =     0.088393  |proj g|=     4.929e-05
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =     0.088393  |proj g|=    0.00019319
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =     0.088393  |proj g|=    1.4316e-05
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =     0.088393  |proj g|=    1.2414e-09
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 11
+[job(743): 2016-09-09 20:16:47] function evaluations 14
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 11
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 1.24145e-09
+[job(743): 2016-09-09 20:16:47] final function value 0.0883929
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = 0.0883929
+[job(743): 2016-09-09 20:16:47] final  value 0.088393 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 9: C=61.4; sigma=0.00841
+[job(743): 2016-09-09 20:16:47] [Tune-y] 9: acc.test.mean=0.997; time: 0.0 min; memory: 118Mb use, 157Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  41.47829 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  0.09151539 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=    -0.091515  |proj g|=      0.83363
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =     -0.46793  |proj g|=      0.099101
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =     -0.47541  |proj g|=      0.030875
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =     -0.47715  |proj g|=      0.031199
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =     -0.48255  |proj g|=      0.054403
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =     -0.49518  |proj g|=       0.11825
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =     -0.52637  |proj g|=       0.21285
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =     -0.58958  |proj g|=       0.29594
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =     -0.64904  |proj g|=       0.20422
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =     -0.69007  |proj g|=       0.13593
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =     -0.70388  |proj g|=      0.041484
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =     -0.70584  |proj g|=     0.0034971
+[job(743): 2016-09-09 20:16:47] At iterate    12  f =     -0.70586  |proj g|=    0.00022591
+[job(743): 2016-09-09 20:16:47] At iterate    13  f =     -0.70586  |proj g|=    1.5097e-05
+[job(743): 2016-09-09 20:16:47] At iterate    14  f =     -0.70586  |proj g|=    2.5233e-09
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 14
+[job(743): 2016-09-09 20:16:47] function evaluations 15
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 14
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 2.52329e-09
+[job(743): 2016-09-09 20:16:47] final function value -0.705859
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -0.705859
+[job(743): 2016-09-09 20:16:47] final  value -0.705859 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 10: C=2.15; sigma=0.00454
+[job(743): 2016-09-09 20:16:47] [Tune-y] 10: acc.test.mean=0.996; time: 0.0 min; memory: 118Mb use, 158Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  41.47829 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  1.951523 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -1.9515  |proj g|=      0.84972
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -2.4537  |proj g|=       0.29483
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -2.5048  |proj g|=      0.085424
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -2.5094  |proj g|=      0.025857
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -2.5248  |proj g|=      0.063892
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -2.5915  |proj g|=       0.24505
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =       -2.653  |proj g|=       0.30053
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -2.7002  |proj g|=       0.10012
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -2.7054  |proj g|=      0.019788
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -2.7057  |proj g|=    0.00023809
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -2.7057  |proj g|=    5.3827e-06
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -2.7057  |proj g|=     1.562e-06
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 11
+[job(743): 2016-09-09 20:16:47] function evaluations 14
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 11
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 1.56195e-06
+[job(743): 2016-09-09 20:16:47] final function value -2.70567
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -2.70567
+[job(743): 2016-09-09 20:16:47] final  value -2.705675 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 11: C=1.23e+03; sigma=0.0263
+[job(743): 2016-09-09 20:16:47] [Tune-y] 11: acc.test.mean=0.992; time: 0.0 min; memory: 118Mb use, 158Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  43.80877 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  3.892933 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -3.8929  |proj g|=      0.54693
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -4.0683  |proj g|=      0.096382
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -4.0786  |proj g|=      0.094848
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -4.1505  |proj g|=       0.23851
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -4.2415  |proj g|=       0.32865
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -4.3532  |proj g|=       0.18089
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -4.3807  |proj g|=      0.036214
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -4.3823  |proj g|=      0.001388
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -4.3823  |proj g|=    0.00025233
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -4.3823  |proj g|=    0.00012921
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -4.3823  |proj g|=    7.6554e-07
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -4.3823  |proj g|=    8.4583e-11
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 11
+[job(743): 2016-09-09 20:16:47] function evaluations 13
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 11
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 8.45826e-11
+[job(743): 2016-09-09 20:16:47] final function value -4.3823
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -4.3823
+[job(743): 2016-09-09 20:16:47] final  value -4.382303 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 12: C=15; sigma=0.003
+[job(743): 2016-09-09 20:16:47] [Tune-y] 12: acc.test.mean=0.996; time: 0.0 min; memory: 118Mb use, 158Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  43.80877 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  4.88875 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -4.8887  |proj g|=       1.1314
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -5.8612  |proj g|=       0.50994
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -5.9683  |proj g|=       0.35183
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -6.0232  |proj g|=      0.044157
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -6.0252  |proj g|=       0.03158
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -6.0271  |proj g|=      0.031007
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -6.0333  |proj g|=       0.07968
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -6.0481  |proj g|=       0.16524
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -6.0878  |proj g|=       0.31107
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -6.1707  |proj g|=       0.48307
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -6.2259  |proj g|=       0.30809
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -6.2647  |proj g|=      0.039815
+[job(743): 2016-09-09 20:16:47] At iterate    12  f =      -6.2653  |proj g|=    0.00034355
+[job(743): 2016-09-09 20:16:47] At iterate    13  f =      -6.2653  |proj g|=    1.5164e-05
+[job(743): 2016-09-09 20:16:47] At iterate    14  f =      -6.2653  |proj g|=    5.7157e-08
+[job(743): 2016-09-09 20:16:47] At iterate    15  f =      -6.2653  |proj g|=    4.3357e-11
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 15
+[job(743): 2016-09-09 20:16:47] function evaluations 16
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 15
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 4.33573e-11
+[job(743): 2016-09-09 20:16:47] final function value -6.26529
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -6.26529
+[job(743): 2016-09-09 20:16:47] final  value -6.265294 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 13: C=1.48; sigma=0.00311
+[job(743): 2016-09-09 20:16:47] [Tune-y] 13: acc.test.mean=0.999; time: 0.0 min; memory: 118Mb use, 158Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  43.80877 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  8.471011 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=       -8.471  |proj g|=        1.211
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -9.7322  |proj g|=       0.75777
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -10.043  |proj g|=       0.13258
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -10.052  |proj g|=      0.065334
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -10.055  |proj g|=      0.049852
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -10.062  |proj g|=      0.047887
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -10.081  |proj g|=       0.14566
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -10.117  |proj g|=       0.24286
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -10.174  |proj g|=       0.27058
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =       -10.23  |proj g|=        0.0585
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -10.232  |proj g|=     0.0014422
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -10.232  |proj g|=      0.001044
+[job(743): 2016-09-09 20:16:47] At iterate    12  f =      -10.232  |proj g|=    0.00024781
+[job(743): 2016-09-09 20:16:47] At iterate    13  f =      -10.232  |proj g|=    1.9849e-06
+[job(743): 2016-09-09 20:16:47] At iterate    14  f =      -10.232  |proj g|=    4.9948e-10
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 14
+[job(743): 2016-09-09 20:16:47] function evaluations 17
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 14
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 4.99483e-10
+[job(743): 2016-09-09 20:16:47] final function value -10.2319
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -10.2319
+[job(743): 2016-09-09 20:16:47] final  value -10.231858 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 14: C=0.81; sigma=0.00282
+[job(743): 2016-09-09 20:16:47] [Tune-y] 14: acc.test.mean=   1; time: 0.0 min; memory: 118Mb use, 158Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  43.80877 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  13.46392 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -13.464  |proj g|=       1.1246
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -14.678  |proj g|=        1.0216
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -15.474  |proj g|=       0.77534
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -15.784  |proj g|=       0.32686
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -15.829  |proj g|=      0.076889
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -15.835  |proj g|=      0.077183
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -15.859  |proj g|=       0.19313
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -15.907  |proj g|=       0.38283
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -15.998  |proj g|=       0.50237
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -16.122  |proj g|=       0.32969
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -16.167  |proj g|=      0.073556
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -16.169  |proj g|=     0.0062539
+[job(743): 2016-09-09 20:16:47] At iterate    12  f =      -16.169  |proj g|=    0.00041828
+[job(743): 2016-09-09 20:16:47] At iterate    13  f =      -16.169  |proj g|=    0.00025393
+[job(743): 2016-09-09 20:16:47] At iterate    14  f =      -16.169  |proj g|=    2.1935e-05
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 14
+[job(743): 2016-09-09 20:16:47] function evaluations 20
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 15
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 2.19349e-05
+[job(743): 2016-09-09 20:16:47] final function value -16.169
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -16.169
+[job(743): 2016-09-09 20:16:47] final  value -16.169028 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 15: C=4.4; sigma=0.00814
+[job(743): 2016-09-09 20:16:47] [Tune-y] 15: acc.test.mean=0.997; time: 0.0 min; memory: 118Mb use, 158Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  43.80877 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  19.1543 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -19.154  |proj g|=      0.66032
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -19.242  |proj g|=       0.49331
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -19.299  |proj g|=      0.073529
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =        -19.3  |proj g|=     0.0075483
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =        -19.3  |proj g|=     0.0074652
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =        -19.3  |proj g|=     0.0081303
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =        -19.3  |proj g|=      0.023385
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -19.301  |proj g|=      0.045159
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -19.303  |proj g|=      0.078613
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -19.306  |proj g|=       0.11785
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -19.311  |proj g|=        0.1293
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -19.314  |proj g|=      0.083908
+[job(743): 2016-09-09 20:16:47] At iterate    12  f =      -19.316  |proj g|=    0.00092509
+[job(743): 2016-09-09 20:16:47] At iterate    13  f =      -19.316  |proj g|=     0.0008145
+[job(743): 2016-09-09 20:16:47] At iterate    14  f =      -19.316  |proj g|=    3.5429e-05
+[job(743): 2016-09-09 20:16:47] At iterate    15  f =      -19.316  |proj g|=    6.1458e-07
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 15
+[job(743): 2016-09-09 20:16:47] function evaluations 16
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 15
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 6.14582e-07
+[job(743): 2016-09-09 20:16:47] final function value -19.316
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -19.316
+[job(743): 2016-09-09 20:16:47] final  value -19.316033 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 16: C=1.54; sigma=0.00275
+[job(743): 2016-09-09 20:16:47] [Tune-y] 16: acc.test.mean=0.999; time: 0.0 min; memory: 118Mb use, 158Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  43.80877 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  24.15166 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -24.152  |proj g|=      0.55543
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -24.201  |proj g|=        0.4801
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =       -24.25  |proj g|=      0.074184
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -24.252  |proj g|=      0.031274
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -24.253  |proj g|=      0.031774
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -24.256  |proj g|=      0.067928
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -24.262  |proj g|=       0.14713
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =       -24.28  |proj g|=       0.28622
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -24.324  |proj g|=       0.51279
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -24.427  |proj g|=       0.79495
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -24.485  |proj g|=        0.5444
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -24.542  |proj g|=      0.076503
+[job(743): 2016-09-09 20:16:47] At iterate    12  f =      -24.543  |proj g|=     0.0088205
+[job(743): 2016-09-09 20:16:47] At iterate    13  f =      -24.543  |proj g|=    0.00016615
+[job(743): 2016-09-09 20:16:47] At iterate    14  f =      -24.543  |proj g|=    3.6927e-07
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 14
+[job(743): 2016-09-09 20:16:47] function evaluations 15
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 14
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 1
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 3.69269e-07
+[job(743): 2016-09-09 20:16:47] final function value -24.5429
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -24.5429
+[job(743): 2016-09-09 20:16:47] final  value -24.542926 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 17: C=4.09e+03; sigma=0.0398
+[job(743): 2016-09-09 20:16:47] [Tune-y] 17: acc.test.mean=0.993; time: 0.0 min; memory: 118Mb use, 158Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  26.51654 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -26.517  |proj g|=      0.69829
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -26.705  |proj g|=       0.29417
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -26.727  |proj g|=      0.081334
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -26.731  |proj g|=      0.059188
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -26.735  |proj g|=      0.060308
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -26.748  |proj g|=       0.14935
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -26.778  |proj g|=        0.3012
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -26.847  |proj g|=       0.48846
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -26.993  |proj g|=       0.60536
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -27.317  |proj g|=       0.36108
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -27.387  |proj g|=       0.11274
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -27.389  |proj g|=      0.020093
+[job(743): 2016-09-09 20:16:47] At iterate    12  f =      -27.389  |proj g|=    0.00062904
+[job(743): 2016-09-09 20:16:47] At iterate    13  f =      -27.389  |proj g|=    3.6569e-06
+[job(743): 2016-09-09 20:16:47] Bad direction in the line search;
+[job(743): 2016-09-09 20:16:47]    refresh the lbfgs memory and restart the iteration.
+[job(743): 2016-09-09 20:16:47] At iterate    14  f =      -27.389  |proj g|=      4.86e-06
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 14
+[job(743): 2016-09-09 20:16:47] function evaluations 38
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 15
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 1
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 4.85998e-06
+[job(743): 2016-09-09 20:16:47] final function value -27.3892
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -27.3892
+[job(743): 2016-09-09 20:16:47] final  value -27.389153 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 18: C=0.0182; sigma=0.00288
+[job(743): 2016-09-09 20:16:47] [Tune-y] 18: acc.test.mean=0.736; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  17.80736 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -17.807  |proj g|=       3.2621
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -23.405  |proj g|=       0.25244
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -23.493  |proj g|=       0.11193
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -23.509  |proj g|=      0.044235
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -23.516  |proj g|=       0.04315
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -23.519  |proj g|=     0.0052751
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -23.519  |proj g|=    0.00041734
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -23.519  |proj g|=    1.3125e-06
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -23.519  |proj g|=    3.9541e-08
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 8
+[job(743): 2016-09-09 20:16:47] function evaluations 9
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 8
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 3.95407e-08
+[job(743): 2016-09-09 20:16:47] final function value -23.5186
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -23.5186
+[job(743): 2016-09-09 20:16:47] final  value -23.518636 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 19: C=33.4; sigma=0.0139
+[job(743): 2016-09-09 20:16:47] [Tune-y] 19: acc.test.mean=0.997; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  23.42036 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=       -23.42  |proj g|=       0.4328
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -23.631  |proj g|=       0.38052
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -25.005  |proj g|=       0.52468
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -25.525  |proj g|=       0.67314
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -26.149  |proj g|=       0.76179
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -26.481  |proj g|=       0.20903
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -26.526  |proj g|=      0.052938
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -26.529  |proj g|=     0.0057154
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -26.529  |proj g|=    0.00063756
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -26.529  |proj g|=    0.00022421
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -26.529  |proj g|=    4.4452e-06
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -26.529  |proj g|=    1.7795e-07
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 11
+[job(743): 2016-09-09 20:16:47] function evaluations 14
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 11
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 1.77947e-07
+[job(743): 2016-09-09 20:16:47] final function value -26.5288
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -26.5288
+[job(743): 2016-09-09 20:16:47] final  value -26.528800 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 20: C=10.9; sigma=0.00786
+[job(743): 2016-09-09 20:16:47] [Tune-y] 20: acc.test.mean=0.999; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  29.01524 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -29.015  |proj g|=       1.1314
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -30.103  |proj g|=        0.3519
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -30.282  |proj g|=       0.19296
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -30.373  |proj g|=       0.16559
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -30.434  |proj g|=       0.10774
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -30.444  |proj g|=     0.0080766
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -30.444  |proj g|=    0.00090118
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -30.444  |proj g|=     2.693e-05
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -30.444  |proj g|=    1.9443e-06
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 8
+[job(743): 2016-09-09 20:16:47] function evaluations 9
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 8
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 1.94431e-06
+[job(743): 2016-09-09 20:16:47] final function value -30.4438
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -30.4438
+[job(743): 2016-09-09 20:16:47] final  value -30.443835 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 21: C=0.603; sigma=0.00309
+[job(743): 2016-09-09 20:16:47] [Tune-y] 21: acc.test.mean=0.984; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  20.6352 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -20.635  |proj g|=       1.8762
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -21.796  |proj g|=       0.56102
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =       -22.45  |proj g|=       0.49521
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -22.642  |proj g|=       0.46147
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -22.699  |proj g|=       0.50271
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -22.729  |proj g|=       0.14471
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -22.734  |proj g|=      0.029349
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -22.734  |proj g|=     0.0018976
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -22.734  |proj g|=    1.1818e-05
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -22.734  |proj g|=    1.8448e-06
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 9
+[job(743): 2016-09-09 20:16:47] function evaluations 12
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 9
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 1.84475e-06
+[job(743): 2016-09-09 20:16:47] final function value -22.7337
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -22.7337
+[job(743): 2016-09-09 20:16:47] final  value -22.733712 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 22: C=46.4; sigma=0.00428
+[job(743): 2016-09-09 20:16:47] [Tune-y] 22: acc.test.mean=0.996; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  9.30953 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -9.3095  |proj g|=       1.9401
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -15.861  |proj g|=        3.0574
+[job(743): 2016-09-09 20:16:47] ys=-2.299e+00  -gs= 5.445e+00, BFGS update SKIPPED
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -23.582  |proj g|=       0.75678
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -23.762  |proj g|=        1.1781
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =        -24.5  |proj g|=        1.0012
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -24.797  |proj g|=       0.75117
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -24.853  |proj g|=       0.15788
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =       -24.86  |proj g|=      0.034559
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -24.861  |proj g|=     0.0045205
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -24.861  |proj g|=    0.00014412
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -24.861  |proj g|=    3.8054e-07
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 10
+[job(743): 2016-09-09 20:16:47] function evaluations 14
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 10
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 1
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 3.80536e-07
+[job(743): 2016-09-09 20:16:47] final function value -24.8609
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -24.8609
+[job(743): 2016-09-09 20:16:47] final  value -24.860863 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 23: C=0.437; sigma=0.00206
+[job(743): 2016-09-09 20:16:47] [Tune-y] 23: acc.test.mean=0.999; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  14.29264 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -14.293  |proj g|=       2.1474
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -21.089  |proj g|=        3.4924
+[job(743): 2016-09-09 20:16:47] ys=-2.754e+00  -gs= 5.398e+00, BFGS update SKIPPED
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =       -27.45  |proj g|=        1.4655
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -27.692  |proj g|=       0.22657
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -27.698  |proj g|=       0.10022
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =        -27.7  |proj g|=      0.089555
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -27.709  |proj g|=     0.0035861
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -27.709  |proj g|=    0.00014795
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -27.709  |proj g|=    2.0307e-06
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 8
+[job(743): 2016-09-09 20:16:47] function evaluations 11
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 8
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 1
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 2.03065e-06
+[job(743): 2016-09-09 20:16:47] final function value -27.7086
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -27.7086
+[job(743): 2016-09-09 20:16:47] final  value -27.708561 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 24: C=7.71; sigma=0.00434
+[job(743): 2016-09-09 20:16:47] [Tune-y] 24: acc.test.mean=0.997; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  23.89667 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -23.897  |proj g|=       2.4768
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -27.951  |proj g|=        2.3016
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -28.609  |proj g|=        2.2067
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -29.724  |proj g|=       0.93946
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -30.181  |proj g|=         1.578
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -30.402  |proj g|=       0.16781
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -30.423  |proj g|=      0.051392
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -30.426  |proj g|=      0.013565
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -30.426  |proj g|=     0.0005018
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -30.426  |proj g|=    6.8998e-06
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 9
+[job(743): 2016-09-09 20:16:47] function evaluations 10
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 9
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 6.8998e-06
+[job(743): 2016-09-09 20:16:47] final function value -30.4263
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -30.4263
+[job(743): 2016-09-09 20:16:47] final  value -30.426332 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 25: C=717; sigma=0.0376
+[job(743): 2016-09-09 20:16:47] [Tune-y] 25: acc.test.mean=0.995; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  18.87809 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -18.878  |proj g|=       8.7099
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -20.811  |proj g|=        1.5732
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -20.982  |proj g|=        1.0641
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -21.247  |proj g|=        1.1759
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -21.539  |proj g|=        1.9371
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -24.131  |proj g|=        11.786
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -26.978  |proj g|=        8.8816
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -29.917  |proj g|=        7.5152
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -32.553  |proj g|=       0.39842
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -32.789  |proj g|=       0.75125
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -32.833  |proj g|=       0.39002
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =      -32.846  |proj g|=      0.011663
+[job(743): 2016-09-09 20:16:47] At iterate    12  f =      -32.846  |proj g|=     0.0013451
+[job(743): 2016-09-09 20:16:47] At iterate    13  f =      -32.846  |proj g|=    1.2972e-05
+[job(743): 2016-09-09 20:16:47] At iterate    14  f =      -32.846  |proj g|=    3.0168e-07
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 14
+[job(743): 2016-09-09 20:16:47] function evaluations 19
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 14
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 3.01679e-07
+[job(743): 2016-09-09 20:16:47] final function value -32.8464
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -32.8464
+[job(743): 2016-09-09 20:16:47] final  value -32.846426 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 26: C=0.549; sigma=0.00238
+[job(743): 2016-09-09 20:16:47] [Tune-y] 26: acc.test.mean=0.999; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  21.0792 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -21.079  |proj g|=       3.3025
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -31.877  |proj g|=       0.92759
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -32.466  |proj g|=        1.9382
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =       -34.66  |proj g|=        1.2931
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -34.831  |proj g|=       0.68378
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -34.863  |proj g|=       0.15753
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -34.865  |proj g|=     0.0055288
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -34.865  |proj g|=    0.00028157
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -34.865  |proj g|=    1.7901e-05
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 8
+[job(743): 2016-09-09 20:16:47] function evaluations 15
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 8
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 1.79014e-05
+[job(743): 2016-09-09 20:16:47] final function value -34.8646
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -34.8646
+[job(743): 2016-09-09 20:16:47] final  value -34.864555 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 27: C=3.92; sigma=0.00581
+[job(743): 2016-09-09 20:16:47] [Tune-y] 27: acc.test.mean=0.996; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  26.13739 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=      -26.137  |proj g|=       3.3539
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =       -33.47  |proj g|=        1.0733
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =      -33.653  |proj g|=        1.1313
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -36.687  |proj g|=        4.1351
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -37.308  |proj g|=        3.3907
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -38.048  |proj g|=        0.6321
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -38.101  |proj g|=      0.095509
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -38.103  |proj g|=      0.029442
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -38.103  |proj g|=     0.0043181
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -38.103  |proj g|=    2.0257e-05
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -38.103  |proj g|=    1.9219e-06
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 10
+[job(743): 2016-09-09 20:16:47] function evaluations 15
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 11
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 1.92192e-06
+[job(743): 2016-09-09 20:16:47] final function value -38.1033
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -38.1033
+[job(743): 2016-09-09 20:16:47] final  value -38.103350 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune-x] 28: C=36.2; sigma=0.0104
+[job(743): 2016-09-09 20:16:47] [Tune-y] 28: acc.test.mean=0.997; time: 0.0 min; memory: 118Mb use, 166Mb max
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] optimisation start
+[job(743): 2016-09-09 20:16:47] ------------------
+[job(743): 2016-09-09 20:16:47] * estimation method   : MLE 
+[job(743): 2016-09-09 20:16:47] * optimisation method : BFGS 
+[job(743): 2016-09-09 20:16:47] * analytical gradient : used
+[job(743): 2016-09-09 20:16:47] * trend model : ~1
+[job(743): 2016-09-09 20:16:47] * covariance model : 
+[job(743): 2016-09-09 20:16:47]   - type :  matern5_2 
+[job(743): 2016-09-09 20:16:47]   - nugget : NO
+[job(743): 2016-09-09 20:16:47]   - parameters lower bounds :  1e-10 1e-10 
+[job(743): 2016-09-09 20:16:47]   - parameters upper bounds :  47.28016 40.21964 
+[job(743): 2016-09-09 20:16:47]   - best initial criterion value(s) :  29.08049 
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] N = 2, M = 5 machine precision = 2.22045e-16
+[job(743): 2016-09-09 20:16:47] At X0, 0 variables are exactly at the bounds
+[job(743): 2016-09-09 20:16:47] At iterate     0  f=       -29.08  |proj g|=       21.412
+[job(743): 2016-09-09 20:16:47] At iterate     1  f =      -31.723  |proj g|=        2.8327
+[job(743): 2016-09-09 20:16:47] At iterate     2  f =       -35.33  |proj g|=        1.9965
+[job(743): 2016-09-09 20:16:47] At iterate     3  f =      -36.682  |proj g|=        1.0966
+[job(743): 2016-09-09 20:16:47] At iterate     4  f =      -37.315  |proj g|=        1.7181
+[job(743): 2016-09-09 20:16:47] At iterate     5  f =      -39.639  |proj g|=        7.6482
+[job(743): 2016-09-09 20:16:47] At iterate     6  f =      -41.017  |proj g|=        2.1682
+[job(743): 2016-09-09 20:16:47] At iterate     7  f =      -41.348  |proj g|=        1.1567
+[job(743): 2016-09-09 20:16:47] At iterate     8  f =      -41.412  |proj g|=       0.22359
+[job(743): 2016-09-09 20:16:47] At iterate     9  f =      -41.419  |proj g|=       0.07841
+[job(743): 2016-09-09 20:16:47] At iterate    10  f =      -41.423  |proj g|=      0.035761
+[job(743): 2016-09-09 20:16:47] At iterate    11  f =       -41.94  |proj g|=         2.263
+[job(743): 2016-09-09 20:16:47] At iterate    12  f =       -41.94  |proj g|=        2.2632
+[job(743): 2016-09-09 20:16:47] At iterate    13  f =      -42.094  |proj g|=        1.9405
+[job(743): 2016-09-09 20:16:47] At iterate    14  f =      -42.534  |proj g|=        0.1949
+[job(743): 2016-09-09 20:16:47] At iterate    15  f =      -42.544  |proj g|=      0.042653
+[job(743): 2016-09-09 20:16:47] At iterate    16  f =      -42.545  |proj g|=     0.0025381
+[job(743): 2016-09-09 20:16:47] At iterate    17  f =      -42.545  |proj g|=    3.6197e-05
+[job(743): 2016-09-09 20:16:47] At iterate    18  f =      -42.545  |proj g|=    2.0398e-06
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] iterations 18
+[job(743): 2016-09-09 20:16:47] function evaluations 32
+[job(743): 2016-09-09 20:16:47] segments explored during Cauchy searches 19
+[job(743): 2016-09-09 20:16:47] BFGS updates skipped 0
+[job(743): 2016-09-09 20:16:47] active bounds at final generalized Cauchy point 0
+[job(743): 2016-09-09 20:16:47] norm of the final projected gradient 2.03979e-06
+[job(743): 2016-09-09 20:16:47] final function value -42.5448
+[job(743): 2016-09-09 20:16:47] 
+[job(743): 2016-09-09 20:16:47] F = -42.5448
+[job(743): 2016-09-09 20:16:47] final  value -42.544796 
+[job(743): 2016-09-09 20:16:47] converged
+[job(743): 2016-09-09 20:16:47] [Tune] Result: C=0.81; sigma=0.00282 : acc.test.mean=  -1
+[job(743): 2016-09-09 20:16:47] Job terminated successfully
+[job(chunk): 2016-09-09 20:16:48] Calculation finished!
